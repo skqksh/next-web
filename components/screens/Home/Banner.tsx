@@ -25,12 +25,10 @@ const Contents = styled.div`
 const Banner = ({
   children,
   backgroundImage,
-}: BannerProps): JSX.Element => {
-  return (
-    <Container {...{ backgroundImage }}>
-      <Contents>{children}</Contents>
-    </Container>
-  )
-}
+}: BannerProps): JSX.Element => (
+  <Container {...{ backgroundImage }}>
+    <Contents>{children}</Contents>
+  </Container>
+)
 
 export default Banner

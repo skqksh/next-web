@@ -27,18 +27,16 @@ const ReviewerText = styled(Text)`
   color: ${Colors.darkGrey};
 `
 
-const ReviewBox = (): JSX.Element => {
-  return (
-    <Container>
-      <FontAwesomeIcon icon={faQuoteLeft} size={'2x'} color="white" />
-      <MainTextBox>
-        <MainText>
-          바이링크를 통해서 최고의 파트너를 찾을 수 있었어요
-        </MainText>
-      </MainTextBox>
-      <ReviewerText>OO프로젝트 - 홍길동</ReviewerText>
-    </Container>
-  )
-}
+const ReviewBox = (): JSX.Element => (
+  <Container>
+    <FontAwesomeIcon icon={faQuoteLeft} size="2x" color="white" />
+    <MainTextBox>
+      <MainText>
+        바이링크를 통해서 최고의 파트너를 찾을 수 있었어요
+      </MainText>
+    </MainTextBox>
+    <ReviewerText>OO프로젝트 - 홍길동</ReviewerText>
+  </Container>
+)
 
 export default ReviewBox

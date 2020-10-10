@@ -23,37 +23,35 @@ const MainText = styled(Text)`
   }
 `
 
-const LetTogetherSection = (): JSX.Element => {
-  return (
-    <Container>
-      <MainTextBox>
-        <MainText>
-          ByLink가 여러분의 연결고리가 되겠습니다. 안전하고 완성도
-          높은 프로젝트 진행을 위해 바이링크가 함께하겠습니다.
-        </MainText>
-      </MainTextBox>
-      <Row>
-        <Col xs={6} sm={4}>
-          <ReviewBox />
-        </Col>
-        <Col xs={6} sm={4}>
-          <ReviewBox />
-        </Col>
-        <Col xs={6} sm={4}>
-          <ReviewBox />
-        </Col>
-        <Col xs={6} sm={4}>
-          <ReviewBox />
-        </Col>
-        <Col xs={6} sm={4}>
-          <ReviewBox />
-        </Col>
-        <Col xs={6} sm={4}>
-          <ReviewBox />
-        </Col>
-      </Row>
-    </Container>
-  )
-}
+const LetTogetherSection = (): JSX.Element => (
+  <Container>
+    <MainTextBox>
+      <MainText>
+        ByLink가 여러분의 연결고리가 되겠습니다. 안전하고 완성도 높은
+        프로젝트 진행을 위해 바이링크가 함께하겠습니다.
+      </MainText>
+    </MainTextBox>
+    <Row>
+      <Col xs={6} sm={4}>
+        <ReviewBox />
+      </Col>
+      <Col xs={6} sm={4}>
+        <ReviewBox />
+      </Col>
+      <Col xs={6} sm={4}>
+        <ReviewBox />
+      </Col>
+      <Col xs={6} sm={4}>
+        <ReviewBox />
+      </Col>
+      <Col xs={6} sm={4}>
+        <ReviewBox />
+      </Col>
+      <Col xs={6} sm={4}>
+        <ReviewBox />
+      </Col>
+    </Row>
+  </Container>
+)
 
 export default LetTogetherSection

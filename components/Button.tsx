@@ -8,9 +8,9 @@ type ButtonProps = React.DetailedHTMLProps<
   HTMLButtonElement
 >
 
-const DefaultButton = (props: ButtonProps): JSX.Element => {
-  return <button type="button" {...props} />
-}
+const DefaultButton = (props: ButtonProps): JSX.Element => (
+  <button type="button" {...props} />
+)
 
 export const Button = styled(DefaultButton)`
   text-align: center;

@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
+import React from 'react'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 const Container = styled.nav`
   color: blue;
@@ -22,29 +22,27 @@ const Container = styled.nav`
       }
     }
   }
-`;
+`
 
-const Header = (): JSX.Element => {
-  return (
-    <Container>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/Portfolio">Portfolio</Link>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <Link href="/SignUp">SignUp</Link>
-        </li>
-        <li>
-          <Link href="/Login">Login</Link>
-        </li>
-      </ul>
-    </Container>
-  );
-};
+const Header = (): JSX.Element => (
+  <Container>
+    <ul>
+      <li>
+        <Link href="/">Home</Link>
+      </li>
+      <li>
+        <Link href="/Portfolio">Portfolio</Link>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <Link href="/SignUp">SignUp</Link>
+      </li>
+      <li>
+        <Link href="/Login">Login</Link>
+      </li>
+    </ul>
+  </Container>
+)
 
-export default Header;
+export default Header

@@ -22,11 +22,7 @@ const Banner = (): JSX.Element => {
   }
 
   return (
-    <BannerComp
-      backgroundImage={
-        'https://cdn.pixabay.com/photo/2016/01/19/17/53/writing-1149962_960_720.jpg'
-      }
-    >
+    <BannerComp backgroundImage="https://cdn.pixabay.com/photo/2016/01/19/17/53/writing-1149962_960_720.jpg">
       <Row>
         <Col sm={8}>
           <Text style={styles.textLg}>

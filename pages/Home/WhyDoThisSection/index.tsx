@@ -25,20 +25,18 @@ const MainText = styled(Text)`
   }
 `
 
-const WhyDoThisSection = (): JSX.Element => {
-  return (
-    <Container>
-      <MainTextBox>
-        <MainText>
-          N잡 시대, 모두가 월급만으론 안 된다는 것을 알고있습니다.
-          여러분의 스킬을 높이고 돈을 벌 수 있는 프로젝트를 찾으세요
-          <br /> <br />
-          현업에서 뛰는 다양한 전문가들과 마음에 맞는 아이디어를
-          중심으로 모여 사이드 프로젝트를 함께 진행해보세요
-        </MainText>
-      </MainTextBox>
-    </Container>
-  )
-}
+const WhyDoThisSection = (): JSX.Element => (
+  <Container>
+    <MainTextBox>
+      <MainText>
+        N잡 시대, 모두가 월급만으론 안 된다는 것을 알고있습니다.
+        여러분의 스킬을 높이고 돈을 벌 수 있는 프로젝트를 찾으세요
+        <br /> <br />
+        현업에서 뛰는 다양한 전문가들과 마음에 맞는 아이디어를
+        중심으로 모여 사이드 프로젝트를 함께 진행해보세요
+      </MainText>
+    </MainTextBox>
+  </Container>
+)
 
 export default WhyDoThisSection
