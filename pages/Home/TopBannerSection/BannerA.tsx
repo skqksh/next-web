@@ -1,52 +1,26 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 
-import { Text } from '@components/Text'
 import BannerComp from '@components/screens/Home/Banner'
-import { Colors } from '@constants'
+import {
+  MainText,
+  SubText,
+} from '@components/screens/Home/BannerText'
 
 const Banner = (): JSX.Element => {
-  const styles: Record<string, CSSProperties> = {
-    textLg: {
-      display: 'inline-block',
-      fontSize: 22,
-      color: Colors.white,
-      backgroundColor: '#000000AA',
-      padding: 8,
-    },
-    textMd: {
-      display: 'inline-block',
-      fontSize: 18,
-      color: Colors.white,
-      backgroundColor: '#000000AA',
-      padding: 8,
-    },
-  }
-
   return (
-    <BannerComp backgroundImage="https://cdn.pixabay.com/photo/2016/04/11/19/38/bible-1322790_960_720.jpg">
+    <BannerComp backgroundImage="https://lh3.googleusercontent.com/2YzDfBOKCwzPOCVL7sVF4pbPOVLsZMrt6pIWkIELdJ6UOEWWXrqg2VewCTUMxyPZR89oT2bzSiCfWMlRUCbHCiGqop1Fu0nUsJIAZNSd3-bIT2ygdS_8Wop7oIBl0Bkd0kPDH8C8evJh9ztDjyszYrIENWWRDrf1KPHX7ItfLL1ehVCCj2wCFNEoQ0701GSMyfOtfxiN_ma7s9jFlXuHw_Cyzfvg-7Vwz4R3XWN-vyR0Fs0SycvCeioOrmgfJ9lj0JsJApyzJtEErY2nVf8VJCeA6It_g11FLzXd00KZYpI2l8UCOw2XYRLjABbiwmHZsyeJ46iqilMlaNU2k_sXEzq88IWBxvXBSfD72ctTlvoZJkumwQgdvBbmhXgytQr94R1xFHgp2kWxP43qCiSFDmXCw4DXhQYnfbLpJPfRxpob5XQhY4DwDXA_1b9QOuwD6YinKdjRQW2IWR6nyCDOu9QyFaytnaOWMtGm9H-V_htZYhea1HLJtg1QoXbev4xFGMY1GovidvlcAjDdnqyQcU6frkG6GOA_u_qPOn8Zc4VQA-9GjGb4le2oCtWRPA68UtRjoPM6QzNld3T-pIkCCm8mtiCp9lr8ffolOdYEnI6grEY06BaMydqPrReTZCH2LW8exTjf_UpxhGL0nMeo9XEFUvnVRNjpM4PEjYU5qoxXOlsrIZlI8pHJf1Pd5A=w538-h297-no?authuser=0">
       <Row>
-        <Col sm={8}>
-          <Text style={styles.textLg}>
-            나를 위한 프로젝트를 시작해보세요
-          </Text>
-          <br />
-
-          <Text style={styles.textMd}>
-            Why?
-            <br />
-            Side Project make you more skillfull
-          </Text>
-
-          <br />
-          <Text style={styles.textLg}>
-            회사에선 하지 못 할 새로운 프로젝트에 도전하세요
-          </Text>
-        </Col>
         <Col>
-          <Text style={styles.textLg}>
-            부업으로 돈도 벌고 내 전문성도 높일 수 있는 유일한 기회!!
-          </Text>
+          <MainText>
+            Why? <br />
+            Side Project make you more skillfull
+          </MainText>
+          <br />
+          <SubText>
+            나를 위한 프로젝트를 시작해보세요.
+            <br /> 회사에선 하지 못 할 새로운 프로젝트에 도전하세요.
+          </SubText>
         </Col>
       </Row>
     </BannerComp>

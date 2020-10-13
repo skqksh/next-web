@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'KoPubWorldDotum';
+  font-weight: 300;
+  src: url('/fonts/KoPubWorldDotumLight.ttf');
+  src: url('/fonts/KoPubWorldDotumLight.otf');
+}
+
+@font-face {
+  font-family: 'KoPubWorldDotum';
+  font-weight: 400;
+  src: url('/fonts/KoPubWorldDotumMedium.ttf');
+  src: url('/fonts/KoPubWorldDotumMedium.otf');
+}
+
+@font-face {
+  font-family: 'KoPubWorldDotum';
+  font-weight: bold;
+  src: url('/fonts/KoPubWorldDotumBold.ttf');
+  src: url('/fonts/KoPubWorldDotumBold.otf');
+}

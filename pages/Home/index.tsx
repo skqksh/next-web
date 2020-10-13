@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 import TopBannerSection from './TopBannerSection'
 import AskProjectSection from './AskProjectSection'
@@ -9,10 +10,12 @@ import ProjectListSection from './ProjectListSection'
 const Home = (): JSX.Element => (
   <>
     <TopBannerSection />
-    <AskProjectSection />
-    <WhyDoThisSection />
-    <LetTogetherSection />
-    <ProjectListSection />
+    <Container>
+      <AskProjectSection />
+      <WhyDoThisSection />
+      <LetTogetherSection />
+      <ProjectListSection />
+    </Container>
   </>
 )
 

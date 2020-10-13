@@ -24,7 +24,9 @@ const Layout = ({
       />
     </Head>
     <Header />
-    <Container>{children}</Container>
+    <Container fluid style={{ padding: 0 }}>
+      {children}
+    </Container>
     <Footer />
   </div>
 )

@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap'
 
 import BannerA from './BannerA'
 import BannerB from './BannerB'
+import BannerC from './BannerC'
 
 const TopBannerSection = (): JSX.Element => (
   <>
@@ -13,6 +14,10 @@ const TopBannerSection = (): JSX.Element => (
 
       <Carousel.Item>
         <BannerB />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <BannerC />
       </Carousel.Item>
     </Carousel>
   </>
