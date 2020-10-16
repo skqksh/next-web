@@ -1,105 +1,34 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
-import _ from 'lodash'
 
-import { Colors } from '@constants'
-import { Text } from '@components/Text'
-import { TextButton, Button } from '@components/Button'
-import { Box } from '@components/LayoutItem'
-import ProjectCard from '@components/screens/Home/ProjectCard'
-
-const Container = styled.div`
+const ConDiv = styled.div`
   text-align: center;
-  padding: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 `
-const TabButtonBox = styled(
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  ({ thisTabMenu, selectedTab, ...rest }) => <TextButton {...rest} />
-)`
-  background-color: ${({ thisTabMenu, selectedTab }): string =>
-    thisTabMenu === selectedTab ? Colors.orange : 'white'};
-  color: ${({ thisTabMenu, selectedTab }): string =>
-    thisTabMenu === selectedTab ? Colors.white : Colors.text};
+const PopularProjectBox = styled.div`
+  height: 260px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3euQiaGdWkG1Nu8KLHGdtVnmuxN0UlqbBsk4kcnfycubWNjeNChOpLNInde_a834lX4nFRKqqDbvbEMgZGroceV4vdFOxwawMTjrT3tdyyFIEic4yXbtBQhL7LBF05No6QaEhvafb8JMlTTfqKB_hvF=w1717-h486-no);
 `
-
-enum TabMenuEnum {
-  popular,
-  recent,
-}
-
-const TabMenu = ({
-  selectedTab,
-  setSelectedTab,
-}: {
-  selectedTab: TabMenuEnum
-  setSelectedTab: React.Dispatch<React.SetStateAction<TabMenuEnum>>
-}): JSX.Element => (
-  <>
-    <Row>
-      <Col>
-        <TabButtonBox
-          {...{
-            selectedTab,
-            thisTabMenu: TabMenuEnum.popular,
-            onClick: (): void => {
-              setSelectedTab(TabMenuEnum.popular)
-            },
-          }}
-        >
-          <Text>최근 가장 공감 받는 프로젝트</Text>
-        </TabButtonBox>
-      </Col>
-      <Col>
-        <TabButtonBox
-          {...{
-            selectedTab,
-            thisTabMenu: TabMenuEnum.recent,
-            onClick: (): void => {
-              setSelectedTab(TabMenuEnum.recent)
-            },
-          }}
-        >
-          <Text>최근 업로드 된 프로젝트</Text>
-        </TabButtonBox>
-      </Col>
-    </Row>
-  </>
-)
-
-const PopularList = (): JSX.Element => (
-  <Row>
-    {_.times(3, (i) => (
-      <Col key={`PopularList-${i}`}>
-        <ProjectCard />
-      </Col>
-    ))}
-  </Row>
-)
+const RecentProjectBox = styled.div`
+  height: 260px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3d3kqSXfUrKbOWmzcOiqFPXYs-bRI27Yh8KIUHXhXz1vnxLVoO6QGtav0yWDHBSClLiTuH_aYKXqZ2yoBETzJGvyDyom_uGpao1J4T2AV2RZ5yh07LY9IMTJEMxGKi3wAP_ve9HYmxNmH0Xk3a8Eq-q=w1717-h486-no);
+`
 
 const LetTogetherSection = (): JSX.Element => {
-  const [selectedTab, setSelectedTab] = useState<TabMenuEnum>(
-    TabMenuEnum.popular
-  )
-
   return (
-    <Container>
-      <Box>
-        <TabMenu {...{ selectedTab, setSelectedTab }} />
-      </Box>
-      <div style={{ position: 'relative', paddingBottom: 15 }}>
-        <Text style={{ fontSize: 22 }}>최신 프로젝트 </Text>
-        <div style={{ position: 'absolute', top: 0, right: 0 }}>
-          <Button style={{ backgroundColor: Colors.yellow }}>
-            <Text style={{ color: Colors.white }}>
-              모든 프로젝트 보기
-            </Text>
-          </Button>
-        </div>
-      </div>
-      {selectedTab === TabMenuEnum.popular && <PopularList />}
-      {selectedTab === TabMenuEnum.recent && <PopularList />}
-    </Container>
+    <ConDiv>
+      <PopularProjectBox />
+      <br />
+      <br />
+      <RecentProjectBox />
+    </ConDiv>
   )
 }
 

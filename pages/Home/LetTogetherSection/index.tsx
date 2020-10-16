@@ -1,57 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Colors } from '@constants'
-import { Text } from '@components/Text'
-import ReviewBox from '@components/screens/Home/ReviewBox'
-import { Row, Col } from 'react-bootstrap'
-
-const Container = styled.div`
-  text-align: center;
-  padding: 20px;
+const ConDiv = styled.div`
+  height: 170px;
+  background-position: bottom;
+  background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3dvhBoXG5GHJgRJicw-_vYK6g55aWYkHeuh2n9LSUDUV4l84v5FsiT_a2CQXXOpAFXGEt7OMyMoQQBrg7d5aXu4YmgnQbwZ49Jg4_tStzmbSvmOkMPDNqDwNDAgWw2PcB1C8BOGIJeqefWeeEb8w4gL=w1716-h288-no);
+  background-repeat: no-repeat;
+  background-size: contain;
 `
 
-const MainTextBox = styled.div`
-  padding: 30px 0;
-`
-
-const MainText = styled(Text)`
-  font-size: 18px;
-  color: ${Colors.darkGrey};
-  @media only screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-`
-
-const LetTogetherSection = (): JSX.Element => (
-  <Container>
-    <MainTextBox>
-      <MainText>
-        ByLink가 여러분의 연결고리가 되겠습니다. 안전하고 완성도 높은
-        프로젝트 진행을 위해 바이링크가 함께하겠습니다.
-      </MainText>
-    </MainTextBox>
-    <Row>
-      <Col xs={6} sm={4}>
-        <ReviewBox />
-      </Col>
-      <Col xs={6} sm={4}>
-        <ReviewBox />
-      </Col>
-      <Col xs={6} sm={4}>
-        <ReviewBox />
-      </Col>
-      <Col xs={6} sm={4}>
-        <ReviewBox />
-      </Col>
-      <Col xs={6} sm={4}>
-        <ReviewBox />
-      </Col>
-      <Col xs={6} sm={4}>
-        <ReviewBox />
-      </Col>
-    </Row>
-  </Container>
-)
+const LetTogetherSection = (): JSX.Element => <ConDiv></ConDiv>
 
 export default LetTogetherSection
