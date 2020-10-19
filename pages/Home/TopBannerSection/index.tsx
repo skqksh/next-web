@@ -6,7 +6,7 @@ import { Colors } from '@constants'
 import { Text } from '@components/Text'
 
 const ConDiv = styled.div`
-  background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3dRvzp4af2-s40UspISkevQQGH-jZ4rEtdArneoFdGMwCA5NXrNxjJD--55JKDTeUaTtwwXsmMvyFpJZqlz3-UsoVEYQfhfvrUGhXo4M4jyM-Yw5lFXg1r9bBgbcErK9XCkjQ2eGtFKrLMGY-pdGavt=w1350-h525-no);
+  background-image: url(/images/home/top_banner.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-color: ${Colors.grey};

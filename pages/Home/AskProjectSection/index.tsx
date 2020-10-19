@@ -6,12 +6,23 @@ import { Colors } from '@constants'
 import { Text } from '@components/Text'
 import { TextButton } from '@components/Button'
 
+import LinkSvg from '@components/Svg/Link'
+
 const ConDiv = styled.div`
   text-align: center;
   padding-top: 80px;
   height: 500px;
   background-color: ${Colors.grey};
+  position: relative;
 `
+
+const ConDivBgLinkIcon = styled(LinkSvg)`
+  position: absolute;
+  width: 40%;
+  right: -70px;
+  bottom: -70px;
+`
+
 const MainTextBox = styled.div`
   margin-bottom: 30px;
 `
@@ -77,6 +88,7 @@ const ButtonTextInfo = styled(Text)`
 `
 const TopBannerSection = (): JSX.Element => (
   <ConDiv>
+    <ConDivBgLinkIcon />
     <Container>
       <MainTextBox>
         <Text1>
