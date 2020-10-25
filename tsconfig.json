@@ -20,7 +20,9 @@
     "baseUrl": ".",
     "paths": {
       "@constants": ["constants"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@service/*": ["service/*"],
+      "@models/*": ["models/*"]
     }
   },
   "exclude": ["node_modules"],

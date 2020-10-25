@@ -79,7 +79,7 @@ const Header = (): JSX.Element => {
               <Link href="/#">바이링크 소개</Link>
             </li>
             <li>
-              <Link href="/#">프로젝트 찾기</Link>
+              <Link href="/Project/ProjectList">프로젝트 찾기</Link>
             </li>
             <li>
               <Link href="/#">프로젝트 만들기</Link>

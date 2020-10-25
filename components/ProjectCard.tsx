@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 import { Text } from '@components/Text'
 
 const ConDiv = styled.div`
-  padding: 0 10% 10px;
+  padding: 0 0 10px;
 `
 
 const Img = styled.img`
@@ -58,7 +58,11 @@ const ProjectCard = ({
     <Title>{title}</Title>
     <Contens>{contents}</Contens>
     <div style={{ textAlign: 'right' }}>
-      <FontAwesomeIcon icon={faHeart} color="gray" />
+      <FontAwesomeIcon
+        icon={faHeart}
+        color="gray"
+        style={{ marginRight: 5 }}
+      />
       <Text>{`${heartCnt}`}</Text>
     </div>
   </ConDiv>

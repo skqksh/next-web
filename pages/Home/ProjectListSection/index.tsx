@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import _ from 'lodash'
 
 import { Text } from '@components/Text'
-import ProjectCard from '@components/screens/Home/ProjectCard'
+import ProjectCard from '@components/ProjectCard'
 import Slider from '@components/Slider'
 
 const Blinder = styled.div`
@@ -44,16 +44,18 @@ const LetTogetherSection = (): JSX.Element => {
     _.times(4, () => {
       setProjectList((ori) =>
         ori.concat(
-          <ProjectCard
-            {...{
-              src: '/images/home/project1.jpg',
-              title:
-                '[역삼역] 보너스시스템 WAS 업그레이드 및 웹 서비스 고도화',
-              contents:
-                '가치정보기술은 공공, 금융,통신,제조,유/무선서비스 플랫폼 및 빌링솔루션을 기반으로 컨설팅...',
-              heartCnt: 123,
-            }}
-          />
+          <div style={{ paddingRight: '10%', paddingLeft: '10%' }}>
+            <ProjectCard
+              {...{
+                src: '/images/home/project1.jpg',
+                title:
+                  '[역삼역] 보너스시스템 WAS 업그레이드 및 웹 서비스 고도화',
+                contents:
+                  '가치정보기술은 공공, 금융,통신,제조,유/무선서비스 플랫폼 및 빌링솔루션을 기반으로 컨설팅...',
+                heartCnt: 123,
+              }}
+            />
+          </div>
         )
       )
     })
