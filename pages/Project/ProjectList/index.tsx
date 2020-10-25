@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import _ from 'lodash'
 
@@ -48,6 +48,29 @@ const ViewMoreDiv = styled.div`
 `
 
 const ProjectList = (): JSX.Element => {
+  const [projectList, setProjectList] = useState<
+    {
+      src: string
+      title: string
+      contents: string
+      heartCnt: number
+    }[]
+  >([])
+  useEffect(() => {
+    _.times(12, () => {
+      setProjectList((ori) =>
+        ori.concat({
+          src: '/images/home/project1.jpg',
+          title:
+            '[역삼역] 보너스시스템 WAS 업그레이드 및 웹 서비스 고도화',
+          contents:
+            '가치정보기술은 공공, 금융,통신,제조,유/무선서비스 플랫폼 및 빌링솔루션을 기반으로 컨설팅...',
+          heartCnt: 123,
+        })
+      )
+    })
+  }, [])
+
   return (
     <Layout>
       <Container>
@@ -66,19 +89,10 @@ const ProjectList = (): JSX.Element => {
           </Select>
         </SelectDiv>
         <Row>
-          {_.map([, , , , , , , , , , , ,], (a, index) => {
+          {_.map(projectList, (project, index) => {
             return (
               <Col md={3} key={`ProjectList-${index}`}>
-                <ProjectCard
-                  {...{
-                    src: '/images/home/project1.jpg',
-                    title:
-                      '[역삼역] 보너스시스템 WAS 업그레이드 및 웹 서비스 고도화',
-                    contents:
-                      '가치정보기술은 공공, 금융,통신,제조,유/무선서비스 플랫폼 및 빌링솔루션을 기반으로 컨설팅...',
-                    heartCnt: 123,
-                  }}
-                />
+                <ProjectCard {...project} />
               </Col>
             )
           })}
